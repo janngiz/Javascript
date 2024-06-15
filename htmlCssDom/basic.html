@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Practice</title>
+</head>
+<body>
+  <h1 id="main-title">Hello, World!</h1>
+  <p class="description">This is a description paragraph.</p>
+  <button id="changeButton">Change Content</button>
+
+  <script>
+    // Select elements
+    const title = document.getElementById('main-title');
+    const description = document.querySelector('.description');
+    const button = document.getElementById('changeButton');
+
+    // Add event listener to button
+    button.addEventListener('click', function() {
+      // Change the title text
+      title.textContent = 'New Title';
+
+      // Change the description text
+      description.textContent = 'The description has been updated.';
+
+      // Change the title color
+      title.style.color = 'blue';
+
+      // Add a new paragraph
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = 'This is a new paragraph added by JavaScript.';
+      document.body.appendChild(newParagraph);
+    });
+  </script>
+</body>
+</html>
